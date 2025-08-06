@@ -234,8 +234,6 @@ Test manually with an alert JSON file:
 /var/ossec/integrations/custom-slack /var/ossec/logs/alerts/alerts.json
 ```
 
-Or wait for a real SSH login alert to be sent to Slack.
-
 ## 🚀 Result
 
 You’ll begin receiving real-time Slack alerts for all critical, high, and medium-level events. Each alert is detailed, well-formatted, and clearly marked by severity, helping you respond faster and more effectively.
