@@ -234,6 +234,10 @@ Test manually with an alert JSON file:
 /var/ossec/integrations/custom-slack /var/ossec/logs/alerts/alerts.json
 ```
 
+## Related Projects
+
+- [Wazuh Telegram Integration](https://github.com/0xdolan/wazuh-telegram-integration) – Send Wazuh alerts to Telegram using a similar method.
+
 ## 🚀 Result
 
 You’ll begin receiving real-time Slack alerts for all critical, high, and medium-level events. Each alert is detailed, well-formatted, and clearly marked by severity, helping you respond faster and more effectively.
