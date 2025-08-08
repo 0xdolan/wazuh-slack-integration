@@ -131,7 +131,6 @@ def main():
 
     # Build Slack message with block formatting
     text = (
-        "*:rotating_light: Wazuh Alert Notification*\n\n"
         f"*Time:* `{escape_markdown(timestamp)}`\n"
         f"*Username:* `{escape_markdown(srcuser)}`\n"
         f"*Source IP:* `{escape_markdown(srcip)}`\n"
