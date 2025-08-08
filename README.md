@@ -154,6 +154,8 @@ def main():
             f"<{escape_markdown(cve_url)}|Details in CTI>"
         )
 
+    text += "\n\n────────────────────────\n"
+
     webhook_url = choose_webhook(alert_level)
     payload = {"text": text}
     resp = requests.post(webhook_url, json=payload)
