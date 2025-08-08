@@ -157,7 +157,7 @@ def main():
     text += "\n\n────────────────────────\n"
 
     webhook_url = choose_webhook(alert_level)
-    payload = {"text": text}
+    payload = {"icon_emoji": ":rotating_light:", "username": "Wazuh Alert Notification", "text": text}
     resp = requests.post(webhook_url, json=payload)
     if resp.status_code != 200:
         print(f"[ERROR] Slack response: {resp.status_code} – {resp.text}")
