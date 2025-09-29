@@ -101,6 +101,11 @@ def main():
     text += "\n\n────────────────────────\n"
 
     webhook_url = choose_webhook(alert_level)
+
+    if not webhook_url:
+        print(f"[INFO] Skipping alert with level {alert_level} — no webhook defined.")
+        return
+
     payload = {"text": text}
     resp = requests.post(webhook_url, json=payload)
     if resp.status_code != 200:
@@ -109,4 +114,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
