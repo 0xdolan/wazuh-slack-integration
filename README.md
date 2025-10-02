@@ -67,9 +67,10 @@ import requests
 WEBHOOK_CRITICAL = ""  # replace with your Critical channel webhook
 WEBHOOK_HIGH = ""  # replace with your High channel webhook
 WEBHOOK_MEDIUM = ""  # replace with your Medium channel webhook
+WEBHOOK_LOW = ""  # replace with your Low channel webhook
 
-# Excluded Wazuh Rule IDs
-excluded_rules: list = []  # Example: ["1002", "5715", "18107"]
+# Excluded Wazuh Rule IDs - Example: ["1002", "5715", "18107"]
+excluded_rules: list = []
 
 
 def escape_markdown(text):
@@ -87,14 +88,18 @@ def choose_webhook(level):
     try:
         lvl = int(level)
     except ValueError:
-        return WEBHOOK_MEDIUM
-    if lvl >= 11:
-        return WEBHOOK_CRITICAL
-    elif lvl >= 7:
-        return WEBHOOK_HIGH
-    else:
-        return WEBHOOK_MEDIUM
+        return None
 
+    if lvl >= 15:
+        return WEBHOOK_CRITICAL
+    elif 12 <= lvl <= 14:
+        return WEBHOOK_HIGH
+    elif 7 <= lvl <= 11:
+        return WEBHOOK_MEDIUM
+    elif 0 <= lvl <= 6:
+        return WEBHOOK_LOW
+    else:
+        return None
 
 def main():
     if len(sys.argv) < 2:
