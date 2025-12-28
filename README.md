@@ -443,6 +443,9 @@ Test manually with an alert JSON file:
 ## Related Projects
 
 - [Wazuh Telegram Integration](https://github.com/0xdolan/wazuh-telegram-integration) – Send Wazuh alerts to Telegram using a similar method.
+  
+- [Wazuh Teams Integration](https://github.com/0xdolan/wazuh-teams-integration) – Send Wazuh alerts to Microsoft Teams using a similar method.
+
 
 ## 🚀 Result
 
